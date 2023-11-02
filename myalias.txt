@@ -1,0 +1,60 @@
+cat ~/.bash_aliases
+
+
+# some ls aliases
+alias ll='ls -alFG'
+alias la='ls -A'
+alias l='ls -CF'
+alias ls='ls -G'
+
+# Grep related aliases
+#alias grep='grep --color='auto'
+alias grep='egrep --color=auto' #making egrep default
+alias fgrep='fgrep --color=auto'
+
+
+# Aliases set by Kumar
+
+alias myip='curl -s https://icanhazip.com' # Alias to get your system public IP
+alias diag='ssh kmuthuswamy@diag.aviatrix.com'
+alias tf='terraform'
+alias tfa='terraform apply --auto-approve'
+alias tfp='terraform plan'
+alias tfd='terraform destroy --auto-approve'
+alias getuccrel='curl -sk https://release.aviatrix.com/cloudx-license/userConnect_latest_1804_release.py'
+
+
+## Temp Alias IP might change
+alias myctrl='ssh ubuntu@myctrl.avxtac.net'
+alias mycp='ssh ubuntu@mycp.avxtac.net'
+# AWS Related controller/cp aliases
+#alias startmyctrl='aws ec2 start-instances --instance-ids i-0fade125fb1a83965 --profile kumar --region us-east-1'
+#alias startmycp='aws ec2 start-instances --instance-ids i-03798d8576ee34912 --profile kumar --region us-east-1'
+#alias stopmyctrl='aws ec2 stop-instances --instance-ids i-0fade125fb1a83965 --profile kumar --region us-east-1'
+#alias stopmycp='aws ec2 stop-instances --instance-ids i-03798d8576ee34912 --profile kumar --region us-east-1'
+# Azure related controller/cp aliases
+alias startmyctrl='az vm start --resource-group myctrl-avxtac-net-rg --name myctrl-avxtac-net-vm'
+alias startmycp='az vm start --resource-group myctrl-avxtac-net-rg --name mycp-avxtac-net-vm'
+alias stopmyctrl='az vm deallocate --resource-group myctrl-avxtac-net-rg --name myctrl-avxtac-net-vm'
+alias stopmycp='az vm deallocate --resource-group myctrl-avxtac-net-rg --name mycp-avxtac-net-vm'
+alias startmyctrlcp='az vm start --ids /subscriptions/f30f1af6-32ac-4053-bb98-f9cf14f1f6bd/resourceGroups/myctrl-avxtac-net-rg/providers/Microsoft.Compute/virtualMachines/mycp-avxtac-net-vm /subscriptions/f30f1af6-32ac-4053-bb98-f9cf14f1f6bd/resourceGroups/myctrl-avxtac-net-rg/providers/Microsoft.Compute/virtualMachines/myctrl-avxtac-net-vm'
+alias stopmyctrlcp='az vm deallocate --ids /subscriptions/f30f1af6-32ac-4053-bb98-f9cf14f1f6bd/resourceGroups/myctrl-avxtac-net-rg/providers/Microsoft.Compute/virtualMachines/mycp-avxtac-net-vm /subscriptions/f30f1af6-32ac-4053-bb98-f9cf14f1f6bd/resourceGroups/myctrl-avxtac-net-rg/providers/Microsoft.Compute/virtualMachines/myctrl-avxtac-net-vm'
+
+alias updatemysg='update_myctrl-cp_sg.sh'
+alias backup='bash backup.sh'
+
+## Alis for avx-controller & TF
+export TF_VAR_controller_ip=20.231.37.238
+export TF_VAR_ctrl_user_name=admin
+export TF_VAR_ctrl_psswd=Aviatrix#12345
+
+# Aliases coped from
+# https://natelandau.com/my-mac-osx-bash_profile/
+
+alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
+alias ..='cd ../'                           # Go back 1 directory level
+alias ...='cd ../../'                       # Go back 2 directory levels
+alias .3='cd ../../../'                     # Go back 3 directory levels
+alias .4='cd ../../../../'                  # Go back 4 directory levels
+alias .5='cd ../../../../../'               # Go back 5 directory levels
+alias .6='cd ../../../../../../'
